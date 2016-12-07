@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>
+  <script> window.location = "ie.html";</script>
+<![endif]-->
+<!--[if gte IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<html>
+<head profile="http://www.w3.org/2005/10/profile">  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Leslie Restrepo</title>
+  <link rel="icon" type="image/ico" href="images/favicon.ico">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <base href="/">
+</head>
+<body ng-app="app" ng-controller="GeneralController">
+  <header ng-if="$route.current.activetab != 'home'">
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">
+              LESLIE RESTREPO
+          </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="nav navbar-nav navbar-right">
+            <li ng-class="{ active: $route.current.activetab == 'about'}"><a href="/about">About Me</a></li>
+            <li ng-class="{ active: $route.current.activetab == 'work'}"><a href="/work">Work</a></li>
+            <li ng-class="{ active: $route.current.activetab == 'contact'}"><a href="/contact">Contact</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+  </header>
+  <section id="contents">
+    <div ng-view></div>
+  </section>
+  <footer ng-if="$route.current.activetab != 'home'">
+    <div class="container">
+      <div class="col-sm-6"><h4>Lorem ipsum dolor sit amet!</h4></div>
+      <div class="col-sm-6">
+          <div class="social-links">
+            <a href="https://github.com/lesrpo">
+              <i class="fa fa-github fa-2" aria-hidden="true"></i>
+            </a>
+            <a href="https://instagram.com/lesrpo">
+              <i class="fa fa-instagram fa-2" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/leslie-restrepo/en">
+              <i class="fa fa-linkedin fa-2" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.facebook.com/leslierestrepo">
+              <i class="fa fa-facebook fa-2" aria-hidden="true"></i>
+            </a>
+          </div>
+      </div>
+    </div>
+  </footer>
+
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.1.4/scrollreveal.min.js"></script>
+  <script type="text/javascript" src="scripts/app.js"></script>
+  <script type="text/javascript" src="scripts/controllers/GeneralController.js"></script>
+  <script type="text/javascript" src="scripts/controllers/HomeController.js"></script>
+  <script type="text/javascript" src="scripts/controllers/ProjectsController.js"></script>
+  <script type="text/javascript" src="scripts/controllers/ContactController.js"></script>
+  <script type="text/javascript" src="scripts/javascripts.js"></script>
+</body>
+</html>
