@@ -39,12 +39,18 @@ body{
   font-weight:  100;
   font-style:   normal;
   font-stretch: normal;
+  font-size: 16px;
 }
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-border-radius: 0 !important;
+}
+::-moz-selection { background: #3fa5bf; }
+::selection { background: #3fa5bf; }
+:focus {
+    outline-color: transparent;
 }
 a,a:focus, a:hover {
   text-decoration: none;
@@ -59,7 +65,7 @@ a,a:focus, a:hover {
     margin-left: auto;
 }
 p {
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 24px;
 }
 h2 {
@@ -125,6 +131,10 @@ i:hover{
     font-size: 40px;
     line-height: 1.9;
     color: black;
+    letter-spacing: 0.12em;
+}
+.navbar-default .navbar-brand{	
+    color: black;
 }
 .navbar-default{
 	background-color: white;
@@ -134,9 +144,6 @@ i:hover{
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
 	background-color: transparent;
 	color:#000000;
-}
-.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
-
 }
 #menu ul li a{
 	text-transform: uppercase;
@@ -160,7 +167,7 @@ i:hover{
 	//background-color: #F2F2F2;
 }
 .page-title{
-    margin: 45px 0 100px;
+    margin: 45px 0 60px;
 }
 /*******HOME STYLES *****/
 .intro-page{
@@ -191,6 +198,7 @@ i:hover{
     display: inline-block;
     color:white;
     line-height: 1.5;
+    letter-spacing: 0.12em;
 }
 .intro-page .social-links{
 	position: absolute;
@@ -233,11 +241,58 @@ ul.dashed > li:before {
     display: block;
     width: 100%;
 }
+.slick-slider{
+    margin:40px auto;
+}
+.slick-dots {
+    bottom: -40px;
+}
 .slick-next {
     right: 0;
 }
 .slick-prev {
     left: 0;
+}
+.project-slider-for .project div{
+	position: relative;
+}
+
+.project-slider-for .project div:after, .project-slider-for .project div:before {
+	position: absolute;
+	opacity: 0;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s ease-out;
+}
+
+.project-slider-for .project div:after {
+	content: '\A';
+    width: 94%;
+    height: 68%;
+    top: 4%;
+    left: 3%;
+	background: rgba(0, 0, 0,1);
+}
+
+.project-slider-for .project div:before {
+	content: 'VIEW';
+	width: 100%;
+	color: white;
+	z-index: 1;
+	bottom: 25%;
+	padding: 4px 10px;
+	text-align: center;
+	background: transparent;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	font-size: 25px;
+}
+
+.project-slider-for .project div:hover:after, .project-slider-for .project div:hover:before {
+	opacity: 1;
+}
+
+.project-slider-for .project div:hover:before {
+	bottom: 55%;
 }
 
 /*******CONTACT STYLES *****/
@@ -257,8 +312,8 @@ footer{
 
 footer .social-links{
     text-align: right;
+    margin: 7px auto;
 }
-
 @media only screen and (min-width: 768px) {
 	.img-right{
 		float: right;
@@ -276,4 +331,25 @@ footer .social-links{
 	.page-title {
 	    margin: 45px 0 30px;
 	}
+	a.btn.btn-general {
+	    display: block;
+	    margin: 15px auto;
+	    width: 210px;
+	}
+	.intro-logo{
+	    line-height: 0.9;
+	}
 }
+
+/* IE STYLES */
+
+.intro-page.ie{
+    text-align: center;
+    background-image: none;
+    background-size: cover;
+    background-color: gray;
+}
+.intro-page.ie > *{
+    color:white;
+}
+

@@ -5,7 +5,7 @@
 <!--[if gte IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-<html>
+<html ng-app="app">
 <head profile="http://www.w3.org/2005/10/profile">  
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <base href="/">
 </head>
-<body ng-app="app" ng-controller="GeneralController">
+<body ng-controller="GeneralController">
   <header ng-if="$route.current.activetab != 'home'">
     <nav class="navbar navbar-default">
       <div class="container">
@@ -38,9 +38,9 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="menu">
           <ul class="nav navbar-nav navbar-right">
-            <li ng-class="{ active: $route.current.activetab == 'about'}"><a href="/about">About Me</a></li>
-            <li ng-class="{ active: $route.current.activetab == 'work'}"><a href="/work">Work</a></li>
-            <li ng-class="{ active: $route.current.activetab == 'contact'}"><a href="/contact">Contact</a></li>
+            <li ng-class="{ active: $route.current.activetab == 'about'}"><a href="/about" data-toggle="collapse" data-target=".navbar-collapse">About Me</a></li>
+            <li ng-class="{ active: $route.current.activetab == 'work'}"><a href="/work" data-toggle="collapse" data-target=".navbar-collapse">Work</a></li>
+            <li ng-class="{ active: $route.current.activetab == 'contact'}"><a href="/contact" data-toggle="collapse" data-target=".navbar-collapse">Contact</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -51,8 +51,8 @@
   </section>
   <footer ng-if="$route.current.activetab != 'home'">
     <div class="container">
-      <div class="col-sm-6"><h4>Lorem ipsum dolor sit amet!</h4></div>
-      <div class="col-sm-6">
+      <div class="col-sm-6 col-xs-6"><h4>Crafted with ❤!</h4></div>
+      <div class="col-sm-6 col-xs-6">
           <div class="social-links">
             <a href="https://github.com/lesrpo">
               <i class="fa fa-github fa-2" aria-hidden="true"></i>
@@ -75,14 +75,13 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>  
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script> 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
   <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.1.4/scrollreveal.min.js"></script>
   <script type="text/javascript" src="scripts/app.js"></script>
+  <script type="text/javascript" src="scripts/controllers/ProjectsController.js"></script>
   <script type="text/javascript" src="scripts/controllers/GeneralController.js"></script>
   <script type="text/javascript" src="scripts/controllers/HomeController.js"></script>
-  <script type="text/javascript" src="scripts/controllers/ProjectsController.js"></script>
   <script type="text/javascript" src="scripts/controllers/ContactController.js"></script>
   <script type="text/javascript" src="scripts/javascripts.js"></script>
 </body>

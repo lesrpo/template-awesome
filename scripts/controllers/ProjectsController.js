@@ -1,6 +1,6 @@
 app.controller("ProjectsController", ['$scope','$location','$route', function($scope,$location,$route){
 	$scope.$route = $route;
-
+	setTimeout(function(){
 	$('.project-slider-for').slick({
 	  slidesToShow: 1,
 	  slidesToScroll: 1,
@@ -38,4 +38,5 @@ app.controller("ProjectsController", ['$scope','$location','$route', function($s
 		}
 		]
 	});
+	}, 0);
 }]);
