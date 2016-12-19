@@ -46,7 +46,7 @@
       </div><!-- /.container-fluid -->
     </nav>
   </header>
-  <section id="contents">
+  <section id="contents" ng-class="{'padding-content': $route.current.activetab != 'home'}">
     <div ng-view></div>
   </section>
   <footer ng-if="$route.current.activetab != 'home'">
