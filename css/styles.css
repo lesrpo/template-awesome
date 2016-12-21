@@ -126,6 +126,9 @@ i:hover{
     font-size: 25px !important;
     margin-right: 10px;
 }
+.slick-next:before, .slick-prev:before{
+	color:black !important;
+}
 /*******MENU STYLES *****/
 .navbar-brand{
 	padding: 0 15px;
@@ -351,6 +354,15 @@ footer .social-links{
 	}
 	.intro-logo{
 	    line-height: 0.9;
+	}
+	.project-slider-nav{
+	    margin: 0 20px;
+        padding: 0 20px;
+	}
+}
+@media only screen and (max-width: 550px) {
+	.navbar-brand{
+		font-size: 30px;
 	}
 }
 
