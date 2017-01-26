@@ -97,6 +97,18 @@ h2 {
   font-size: 120px;
   font-size: 7.5rem; }
 
+@media (max-width: 768px) {
+  h1 {
+    font-size: 48px;
+    font-size: 3rem; }
+
+  h2 {
+    font-size: 80px;
+    font-size: 5rem; } }
+@media (max-width: 598px) {
+  h2 {
+    font-size: 48px;
+    font-size: 3rem; } }
 ::-moz-selection {
   background: #c59966; }
 
