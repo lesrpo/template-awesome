@@ -7,7 +7,7 @@ $(document).ready(function(){
 	  slidesToScroll: 1,
 	  autoplay: true,
 	  autoplaySpeed: 3000,
-	  centerMode: true,
+	  centerMode: true
 	});
 
 	$('.works-slider').slick({
