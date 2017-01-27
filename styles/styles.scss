@@ -129,7 +129,7 @@ h2{
 }
 @include breakpointCustom(max-width,768px) {    
 	h1{
-		@include rem-fallback(font-size,3);
+		@include rem-fallback(font-size,4);
 	}
 	h2{
 		@include rem-fallback(font-size,5);
@@ -142,9 +142,11 @@ h2{
 }
 ::-moz-selection { 
 	background: $accent-color;
+	color:white;
 }
 ::selection { 
 	background: $accent-color; 
+	color:white;
 }
 :focus {
     outline-color: transparent;
@@ -184,7 +186,7 @@ i{
 }
 
 section.main-section{
-	padding: 60px 0;
+	padding: 40px 0;
 }
 .title{
 	color:$accent-color;
@@ -217,6 +219,15 @@ section.main-section{
 }
 .center-img{
 	margin: 0 auto;
+}
+
+@include breakpointMax(tablet-portrait) {
+    section.main-section{
+		padding: 20px 0;
+	}
+	.section-heading{
+		margin-bottom: 35px;
+	}
 }
 
 // =============================================
@@ -283,14 +294,14 @@ section.main-section{
 				text-transform: uppercase;
 				letter-spacing: .75px;
 				color: white;
-			    padding: 8px 10px;			    
+			    padding: 8px 9px;			    
 		        @include transition(border-color 0.5s);
 
 
 				&:hover,&:active,&.active{
 					color:$accent-color;
 				    border: 1px solid white;
-			        padding: 7px 9px;
+			        padding: 7px 8px;
 				}
 			}
 		}
@@ -405,11 +416,20 @@ section.main-section{
 		    cursor: pointer;
 	    }
 	}
+	@include breakpointMax(tablet-portrait){
+		.work-slider-arrows{
+			margin:65px auto;
+		}
+		.works-slider{
+			.slick-dots{
+			    bottom: -170px;
+			}
+		}
+	}
 }
 
 #services{
-	padding:60px 0 0;
-	
+	padding-bottom: 0;
 	.service{
 		text-align: center;
 		i.fa{
@@ -428,7 +448,7 @@ section.main-section{
 }
 
 #pricing{
-	padding:0;
+	padding-top:0;
 
 	.plan{
 		background-color: lighten($gray-color,50%);

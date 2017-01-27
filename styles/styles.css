@@ -99,8 +99,8 @@ h2 {
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 48px;
-    font-size: 3rem; }
+    font-size: 64px;
+    font-size: 4rem; }
 
   h2 {
     font-size: 80px;
@@ -110,10 +110,12 @@ h2 {
     font-size: 48px;
     font-size: 3rem; } }
 ::-moz-selection {
-  background: #c59966; }
+  background: #c59966;
+  color: white; }
 
 ::selection {
-  background: #c59966; }
+  background: #c59966;
+  color: white; }
 
 :focus {
   outline-color: transparent; }
@@ -147,7 +149,7 @@ i {
   color: black; }
 
 section.main-section {
-  padding: 60px 0; }
+  padding: 40px 0; }
 
 .title {
   color: #c59966;
@@ -181,6 +183,12 @@ section.main-section {
 .center-img {
   margin: 0 auto; }
 
+@media (max-width: 900px) {
+  section.main-section {
+    padding: 20px 0; }
+
+  .section-heading {
+    margin-bottom: 35px; } }
 .navbar-default {
   color: black;
   background-color: transparent;
@@ -221,7 +229,7 @@ section.main-section {
     text-transform: uppercase;
     letter-spacing: .75px;
     color: white;
-    padding: 8px 10px;
+    padding: 8px 9px;
     -webkit-transition: border-color 0.5s;
     -moz-transition: border-color 0.5s;
     -ms-transition: border-color 0.5s;
@@ -230,7 +238,7 @@ section.main-section {
     .navbar-default #menu ul li a:hover, .navbar-default #menu ul li a:active, .navbar-default #menu ul li a.active {
       color: #c59966;
       border: 1px solid white;
-      padding: 7px 9px; }
+      padding: 7px 8px; }
   @media (max-width: 1090px) {
     .navbar-default .container {
       width: 100%; } }
@@ -292,9 +300,14 @@ section.main-section {
       line-height: 0.7;
       padding: 12px 22px;
       cursor: pointer; }
+  @media (max-width: 900px) {
+    #works .work-slider-arrows {
+      margin: 65px auto; }
+    #works .works-slider .slick-dots {
+      bottom: -170px; } }
 
 #services {
-  padding: 60px 0 0; }
+  padding-bottom: 0; }
   #services .service {
     text-align: center; }
     #services .service i.fa {
@@ -310,7 +323,7 @@ section.main-section {
       text-transform: uppercase; }
 
 #pricing {
-  padding: 0; }
+  padding-top: 0; }
   #pricing .plan {
     background-color: #f7f7f7;
     text-align: center;
