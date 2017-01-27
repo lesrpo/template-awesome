@@ -260,6 +260,10 @@ section.main-section {
   -ms-transform: rotate(135deg);
   transform: rotate(135deg); }
 
+#about .timeline {
+  text-align: center; }
+  #about .timeline h2 {
+    margin: 0; }
 #about .team {
   max-width: 750px;
   margin: 0 auto; }

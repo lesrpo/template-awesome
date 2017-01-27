@@ -347,6 +347,12 @@ section.main-section{
 }
 
 #about{
+	.timeline{
+		text-align: center;
+		h2{
+		    margin: 0;
+		}
+	}
 	.team{
 		max-width: 750px;
 	    margin: 0 auto;
