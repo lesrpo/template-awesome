@@ -225,6 +225,12 @@ section.main-section {
       background-color: white; }
   .navbar-default .navbar-collapse {
     margin-top: 5px; }
+    .navbar-default .navbar-collapse.in, .navbar-default .navbar-collapse.collapsing {
+      background-color: white; }
+      .navbar-default .navbar-collapse.in ul li a, .navbar-default .navbar-collapse.collapsing ul li a {
+        color: black !important; }
+        .navbar-default .navbar-collapse.in ul li a:hover, .navbar-default .navbar-collapse.in ul li a:active, .navbar-default .navbar-collapse.in ul li a.active, .navbar-default .navbar-collapse.collapsing ul li a:hover, .navbar-default .navbar-collapse.collapsing ul li a:active, .navbar-default .navbar-collapse.collapsing ul li a.active {
+          color: #c59966 !important; }
   .navbar-default #menu ul li a {
     text-transform: uppercase;
     letter-spacing: .75px;

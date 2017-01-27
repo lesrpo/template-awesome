@@ -287,6 +287,19 @@ section.main-section{
 	}
 	.navbar-collapse{
 	    margin-top: 5px;
+	    &.in, &.collapsing{
+	    	background-color: white;
+	    	ul{
+				li{
+					a{
+						color: black !important;
+						&:hover,&:active,&.active{
+							color:$accent-color !important;
+						}
+					}
+				}
+			}	
+	    }
 	}
 	#menu ul{
 		li{
